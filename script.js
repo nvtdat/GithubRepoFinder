@@ -12,6 +12,7 @@ const languages = [
 ];
 
 async function fetchRepositories(language) {
+  searchResultContainer.classList.remove('error');
   searchResult.innerHTML = '';
   searchResult.textContent = 'Loading, please wait...';
 
@@ -46,6 +47,7 @@ async function fetchRepositories(language) {
 
   } catch (error) {
     console.error('Error fetching repositories:', error);
+    searchResultContainer.classList.add('error');
     searchResult.textContent = 'Error fetching Repositories.';
     showButton('Click to Retry');
   }
@@ -57,6 +59,7 @@ function showButton(label = 'Refresh') {
   const button = document.createElement('button');
   button.textContent = label;
   button.className = label === 'Click to Retry' ? 'retry-button' : 'refresh-button';
+
 
   button.addEventListener('click', () => fetchRepositories(select.value));
   searchRefresh.appendChild(button);
@@ -71,7 +74,7 @@ languages.forEach(language => {
     //Tạo xong thì phải append vào select
     select.appendChild(option);
 })
-
+const searchResultContainer = document.getElementById('search-result');
 const searchResult = document.getElementById('search-result-content');
 searchResult.textContent = 'Please select a language.';
 const searchRefresh = document.getElementById('search-refresh');

@@ -102,6 +102,12 @@ body {
    
 }
 
+.search-result-section.error {
+    color: #ff4d4d; /* Màu chữ đỏ */
+    background-color: #ffe6e6; /* Màu nền đỏ nhạt */
+    border-color: #ff4d4d; /* Màu viền đỏ */
+}
+
 .search-result {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -125,6 +131,10 @@ body {
     width: 100%;
     margin-top: 10px;
     max-width: 300px;
+}
+
+.refresh-button:hover {
+    background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
 }
 
 .retry-button {
@@ -152,11 +162,6 @@ body {
     width: 100%; 
     justify-content: center;
 }
-
-.search-refresh button:hover {
-    background-color: #0056b3;
-}
-
 .search-content {
     display: flex;
     flex-direction: column;
