@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Github Repository Finder</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap&subset=vietnamese" rel="stylesheet">
+
+    </head>
+
+    <body class="main-content">
+        <h1 class="project-title">Github Repository Finder</h1>
+        <h2 class="project-subtitle">Search for a Random Github Repository based on Programming Lannguage.</h2>
+        <div class="search-container">
+            <div class="search-content">
+                <h3 class="search-title">Github Finder </h3>
+                <div class="searh-dropdown">
+                    <span class="search-label">Select a Language</span>
+                    <select id="language-select" class="search-select">
+                        <option vlaue="" selected disabled hidden class="search-option">Select a Language</option>
+                    </select>
+                </div>
+                <div class="search-result-section" id="search-result">
+                    <div class="search-result" id="search-result-content">
+                    <!--Search Result Content will be displayed here --> 
+                    </div>
+                </div>
+                <div class="search-refresh" id="search-refresh">
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</html>
